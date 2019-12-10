@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>11ty-Parallax</title>
+    <title>Parallax Scrolling Example - MOD!</title>
     <style>
       body {
         background-color: #eee;
@@ -31,10 +29,11 @@
         color: #fff;
       }
       #bigYellowCircle {
-        background-image: url('https://www.kirupa.com/images/yellow_circle.svg');
+        background-image: url('../../tattoo_1080x1080.jpg');
+
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: 90%;
+        background-size: 100%;
         position: fixed;
         top: 0;
         width: 100vw;
@@ -42,35 +41,10 @@
         z-index: -1;
         opacity: 0.75;
       }
-      #blueSquare {
-        background-image: url('https://www.kirupa.com/images/blue_square.svg');
-        background-repeat: no-repeat;
-        background-position: 97% bottom;
-        background-size: 10%;
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 100vw;
-        z-index: -2;
-        opacity: 0.75;
-      }
-      #greenPentagon {
-        background-image: url('https://www.kirupa.com/images/green_pentagon.svg');
-        background-repeat: no-repeat;
-        background-position: 5% top;
-        background-size: 50%;
-        position: fixed;
-        top: 0;
-        width: 100vw;
-        height: 100vw;
-        z-index: -3;
-        opacity: 0.75;
-      }
     </style>
   </head>
-  <!-- !! -->
+
   <body>
-    <h1>Hello World for 11ty</h1>
     <h1>Parallaxing!</h1>
     <div id="content">
       <p>All work and no play makes Jack a dull boy</p>
@@ -104,11 +78,8 @@
         el.style.transform = 'translate3d(' + xPos + ', ' + yPos + 'px, 0)';
       }
       window.addEventListener('DOMContentLoaded', scrollLoop, false);
-      var xScrollPosition;
-      var yScrollPosition;
       function scrollLoop() {
-        xScrollPosition = window.scrollX;
-        yScrollPosition = window.scrollY;
+        const yScrollPosition = window.scrollY;
         setTranslate(0, yScrollPosition * -0.2, bigYellowCircle);
         requestAnimationFrame(scrollLoop);
       }
