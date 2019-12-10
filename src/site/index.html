@@ -2,18 +2,13 @@
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parallax Scrolling Example - MOD!</title>
+    <title>11ty-Parallax</title>
     <style>
       body {
         background-color: #eee;
       }
-      #content {
-        padding: 50px;
-        margin: 40px;
-        background-color: rgba(255, 255, 255, 0.48);
-        text-align: center;
-      }
-      #content p {
+
+      #parallax-foreground p {
         font-family: Helvetica, sans-serif;
         font-size: 28px;
         line-height: 40px;
@@ -28,7 +23,7 @@
         background-color: rgba(20, 20, 20, 0.8);
         color: #fff;
       }
-      #bigYellowCircle {
+      #parallax-background {
         background-image: url('../../tattoo_1080x1080.jpg');
 
         background-repeat: no-repeat;
@@ -45,8 +40,7 @@
   </head>
 
   <body>
-    <h1>Parallaxing!</h1>
-    <div id="content">
+    <div id="parallax-foreground">
       <p>All work and no play makes Jack a dull boy</p>
       <p>All work and no play makes Jack a dull boy</p>
       <p>All work and no play makes Jack a dull boy</p>
@@ -70,18 +64,18 @@
       <p>All work and no play makes Jack a dull boy</p>
     </div>
 
-    <div id="bigYellowCircle"></div>
+    <div id="parallax-background"></div>
 
     <script>
-      var bigYellowCircle = document.querySelector('#bigYellowCircle');
+      let parallax_background = document.querySelector('#parallax-background');
       function setTranslate(xPos, yPos, el) {
         el.style.transform = 'translate3d(' + xPos + ', ' + yPos + 'px, 0)';
       }
-      window.addEventListener('DOMContentLoaded', scrollLoop, false);
-      function scrollLoop() {
-        const yScrollPosition = window.scrollY;
-        setTranslate(0, yScrollPosition * -0.2, bigYellowCircle);
-        requestAnimationFrame(scrollLoop);
+      window.addEventListener('DOMContentLoaded', scroll_loop, false);
+      function scroll_loop() {
+        const y_scroll_pos = window.scrollY;
+        setTranslate(0, y_scroll_pos * -0.2, parallax_background);
+        requestAnimationFrame(scroll_loop);
       }
     </script>
   </body>
