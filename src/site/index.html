@@ -16,7 +16,11 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/css/style.css" />
   </head>
 
   <body>
@@ -88,82 +92,16 @@
     <!-- ================================ -->
     <div id="section-1">
       <div id="parallax-background"></div>
-      <div
-        id="parallax-foreground"
-        style="background: yellow; opacity: 0.5; text-align: center;"
-      >
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio
-          amet doloremque cum omnis, consequatur voluptate illum assumenda
-          adipisci numquam vitae quos architecto quam rerum deleniti velit
-          praesentium nobis voluptatum expedita magnam qui provident? Fugit
-          architecto, dolore exercitationem totam nostrum aliquid natus delectus
-          ipsam cum quo atque? Consequatur atque sunt veritatis velit? Culpa
-          accusantium numquam non magnam laudantium, ex perferendis pariatur
-          laborum sapiente eum facilis recusandae assumenda voluptates maxime?
-          Odit quia cumque molestiae voluptatum ut. Ratione, dolorem numquam.
-          Dolor fugit, consequatur, commodi ut, dolore praesentium magnam ad
-          doloremque veritatis maxime itaque sed voluptate? Deleniti ut sequi,
-          optio sunt expedita natus fugit autem soluta maxime facere rerum
-          temporibus rem provident quia. Atque incidunt deserunt vitae illum
-          magni, dolores porro non. Aut quod ipsam inventore assumenda magni,
-          sint excepturi odio vitae magnam modi nemo autem, rerum beatae
-          perspiciatis natus. Quos itaque iusto ab commodi molestias, nemo
-          assumenda cum aperiam unde atque perspiciatis beatae id quas labore
-          nihil, sunt similique. Minima veniam eaque, esse ratione sed
-          voluptatem earum dignissimos laudantium ab iure facilis alias
-          molestiae accusantium odit deleniti ut nisi laborum? Cum molestias
-          dicta quisquam? Repudiandae officiis tenetur harum laboriosam nemo
-          porro soluta. Animi doloribus ducimus laborum perferendis, non labore
-          a minus. Corporis impedit eaque at illo, nostrum error consectetur
-          reiciendis nemo nobis ratione perspiciatis repellendus sequi?
-          Incidunt, at laudantium. Animi deserunt reiciendis optio voluptatibus
-          et ducimus, error adipisci vero quidem, assumenda, distinctio nulla
-          fuga modi nemo accusamus molestiae dolor impedit ut ipsa velit officia
-          debitis. Temporibus alias quibusdam at esse ratione ipsam cupiditate,
-          tempore quam hic repellat aperiam voluptatum ipsum laboriosam ad!
-          Voluptate quibusdam voluptatum atque deleniti earum similique
-          accusantium dolorum nostrum praesentium suscipit, modi, maiores
-          corrupti veritatis voluptatibus. Sequi alias accusamus iusto,
-          excepturi, veritatis nihil facere quia temporibus earum maiores optio
-          deleniti inventore cupiditate ipsum quidem perferendis tempore culpa
-          facilis officiis sed qui? Id, nam quod. Aperiam molestias deleniti
-          laborum? Libero, mollitia. Facere, magnam nisi quam consequuntur iusto
-          id aut sed vero ipsa officia harum repellendus unde hic tempore
-          officiis, consequatur quas illum, at deserunt minus exercitationem
-          deleniti. Quibusdam, laboriosam animi similique labore voluptatibus
-          ducimus repellendus totam placeat! Laborum repudiandae culpa
-          voluptatem deleniti earum nostrum nihil dicta possimus animi, aperiam
-          placeat! Corporis delectus atque harum inventore cumque unde quia
-          animi id distinctio, minima error alias iure sapiente maiores officiis
-          in odio, ratione architecto. Quas corrupti inventore reprehenderit?
-          Assumenda beatae dolores totam molestias itaque possimus corporis
-          fugiat accusantium maiores exercitationem. Saepe fugiat optio itaque
-          ipsa numquam repellat deleniti reprehenderit, alias eligendi minus
-          temporibus praesentium, iste veniam odio qui sequi eos illum. Enim
-          assumenda aut ratione. Obcaecati, nihil. Maiores nisi dignissimos
-          veritatis eaque, earum pariatur illum impedit aliquid animi itaque
-          officiis libero facilis voluptatem quia distinctio fuga voluptas eos
-          vero iure quasi optio, dolore quae culpa? Cum nulla praesentium quam
-          est repellat explicabo provident, alias adipisci accusamus, quae
-          officia eligendi deserunt magni? Velit iste corporis architecto
-          quibusdam provident sit impedit, aliquam rem unde. Aliquam maxime
-          corrupti labore sunt, velit reiciendis debitis dolorem incidunt quos
-          aliquid deleniti vel! Maiores tempora, laudantium obcaecati ullam
-          fugiat delectus.
-        </p>
-
-        <div
-          id="green-container"
-          style="height: 300px; width: 100%; background: green;"
-        >
-          <div
-            id="blue-square"
-            style="height: 100px; width: 100px; background: blue;"
-          ></div>
+      <div id="parallax-foreground">
+        <div class="centered-text">
+          <h1>Brookside Tattoo</h1>
         </div>
         <style>
-          #green-container {
+          .centered-text {
+            background: yellow;
+            opacity: 0.5;
+            height: 100vh;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -172,7 +110,34 @@
       </div>
     </div>
     <!-- ================================ -->
-    <div id="section-2"></div>
+    <div id="section-2">
+      <div class="test-image">
+        <img
+          src="static/img/tattoo_1080x1080.jpg"
+          alt=""
+          style="opacity: 0.6; width: 100%; height: 90%;"
+        />
+      </div>
+      <style>
+        .test-image {
+          height: 100vh;
+          width: 100vw;
+          /* width: 100%; */
+          height: auto;
+          background: linear-gradient(
+              to right,
+              rgba(0, 0, 0, 0.5),
+              rgba(0, 0, 0, 0.5)
+            ),
+            url('static/img/tattoo_1080x1080.jpg'),
+            no-repeat center center fixed;
+          -webkit-background-size: 100%;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
+        }
+      </style>
+    </div>
     <!-- ================================ -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -203,10 +168,19 @@
     </script>
 
     <script>
-      // Push the background image down by the height of the element
       const elmnt = document.getElementById('nav-bar');
-      document.getElementById('parallax-background').style.backgroundPosition =
-        '0 ' + elmnt.offsetHeight + 'px';
+      const navbar_height = elmnt.offsetHeight;
+
+      // Push the background image down by the height of the nav-bar
+      const text = '0 ' + navbar_height + 'px';
+      document.getElementById(
+        'parallax-background'
+      ).style.backgroundPosition = text;
+
+      // Account for offset of background image for title-text section
+      text = '0 calc(100vh - ' + navbar_height + 'px)';
+      console.log(text);
+      document.getElementById('title-text').style.backgroundPosition = text;
     </script>
   </body>
 </html>
