@@ -1,9 +1,11 @@
+<!-- Compile: npx eleventy -->
+<!-- Deploy: ntl deploy --prod -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>11ty-Parallax</title>
-    <link rel="icon" href="../../brookside_logo.ico" />
+    <link rel="icon" href="img/brookside_logo.ico" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -38,9 +40,8 @@
         color: #fff;
       }
       #parallax-background {
-        background-image: url('../../tattoo_1080x1080_nabar-expand.jpg');
+        background-image: url('img/tattoo_1080x1080.jpg');
         background-repeat: no-repeat;
-        background-position: center center;
         background-size: 100%;
         position: fixed;
         top: 0;
@@ -59,7 +60,10 @@
 
   <body>
     <!-- ================================ -->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <nav
+      id="nav-bar"
+      class="navbar navbar-expand-md navbar-dark bg-dark sticky-top"
+    >
       <span class="navbar-brand">Navbar</span>
       <button
         class="navbar-toggler"
@@ -121,7 +125,6 @@
       </div>
     </nav>
     <!-- ================================ -->
-
     <div id="section-1">
       <div id="parallax-background"></div>
       <div id="parallax-foreground">
@@ -246,8 +249,9 @@
         </p>
       </div>
     </div>
-
+    <!-- ================================ -->
     <div id="section-2"></div>
+    <!-- ================================ -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -274,6 +278,13 @@
         setTranslate(0, y_scroll_pos * -0.2, parallax_background);
         requestAnimationFrame(scroll_loop);
       }
+    </script>
+
+    <script>
+      // Push the background image down by the height of the element
+      const elmnt = document.getElementById('nav-bar');
+      document.getElementById('parallax-background').style.backgroundPosition =
+        '0 ' + elmnt.offsetHeight + 'px';
     </script>
   </body>
 </html>
