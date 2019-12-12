@@ -1,10 +1,10 @@
-h1 {
+.overlay-foreground {
   font-size: 60px;
   color: white;
   z-index: 1;
 }
 
-.container {
+.overlay-container {
   background: #000
     url(http://www.publicdomainpictures.net/pictures/30000/velka/autumn-forest-1351265582Bf1.jpg);
   height: 400px;
